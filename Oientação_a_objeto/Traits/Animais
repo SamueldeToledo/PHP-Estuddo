@@ -1,0 +1,25 @@
+<?php 
+
+//Traits são como classes, mas não se pode herdar multiplas classes em uma só, então usamos traits! desta forma conseguimos usar inúmeras classes dentro de um bloco de código.
+
+trait Animais{
+    public function Andar(){
+        Echo"Escuto passos de animais";
+    }
+}
+
+trait Plantas{
+    public function vento(){
+echo"\nE as danças das folhas sobre o vento.";
+    }
+}
+
+
+class Ambientação{
+    use Animais,Plantas;
+}
+
+
+$objeto = new Ambientação();
+$objeto->Andar();
+$objeto->vento();
